@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-from decouple import config
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -79,9 +78,9 @@ DATABASES = {
         "ENGINE": "django.db.backends.dummy",
         "NAME": "django",
         "CLIENT": {
-            "host": config("MONGO_URI"),
-            "username": config("MONGO_USERNAME"),
-            "password": config("MONGO_PASSWORD"),
+            "host": "mongodb+srv://hrithikvishwakarma001:abc@clotho.xhb88tv.mongodb.net",
+            "username": "hrithikvishwakarma001",
+            "password":"abc",
             "authMechanism": "SCRAM-SHA-1",
         },
     },
@@ -132,4 +131,3 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # deployment
 STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
