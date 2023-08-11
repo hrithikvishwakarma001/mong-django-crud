@@ -1,0 +1,6 @@
+crud-env/
+*.pyc
+__pycache__/
+.idea/
+*.log
+*.bak
